@@ -3,13 +3,21 @@ import { Card, Container } from "semantic-ui-react";
 import Flashcard from "./Flashcard";
 
 const Flashcards = ({ flashCards, remove }) => (
-  <Container textAlign="center">
+  <Card.Group itemsPerRow={3}>
     {flashCards.map(flashcard => (
-      <Card>
+      <Card
+        raised
+        style={{
+          marginTop: "50px",
+          paddingTop: "30px",
+          paddingBottom: "10px",
+          backgroundColor: "#fdd835"
+        }}
+      >
         <Flashcard key={flashcard.id} {...flashcard} remove2={remove} />
       </Card>
     ))}
-  </Container>
+  </Card.Group>
 );
 export default Flashcards;
 

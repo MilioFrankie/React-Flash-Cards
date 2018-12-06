@@ -16,7 +16,7 @@ class CardForm extends React.Component {
 
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit} style={{ marginTop: "20px" }}>
         <Form.Group widths="equal">
           <Form.Input
             fluid
@@ -34,8 +34,9 @@ class CardForm extends React.Component {
             value={this.state.back}
             onChange={this.handleChange}
           />
-          <Form.Button>Submit</Form.Button>
         </Form.Group>
+        <Form.Button color="green">Submit</Form.Button>
+        <hr/>
       </Form>
     );
   }

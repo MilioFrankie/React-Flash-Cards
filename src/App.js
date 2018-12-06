@@ -29,11 +29,13 @@ class App extends Component {
     });
     this.setState({ flashCrds: [...fCards] });
   };
-
+  
   render() {
     return (
-      <Container style={{ paddingTop: "25px" }}>
-        <Header as="h1">REACT FLASH CARDS</Header>
+      <Container style={{ marginTop: "45px" }}>
+        <Header textAlign="center" as="h1">
+          REACT FLASH CARDS
+        </Header>
         <br />
         <CardForm add={this.addCard} />
         <Flashcards
