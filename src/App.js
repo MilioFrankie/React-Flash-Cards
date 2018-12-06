@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import { Container, Header } from "semantic-ui-react";
 import Flashcards from "./Flashcards";
 import CardForm from "./CardForm";
@@ -25,13 +23,23 @@ class App extends Component {
     this.setState({ flashCrds: [fcard, ...this.state.flashCrds] });
   };
 
+  removeCard = id => {
+    const fCards = this.state.flashCrds.filter(fcard => {
+      if (fcard.id !== id) return fcard;
+    });
+    this.setState({ flashCrds: [...fCards] });
+  };
+
   render() {
     return (
       <Container style={{ paddingTop: "25px" }}>
         <Header as="h1">REACT FLASH CARDS</Header>
         <br />
         <CardForm add={this.addCard} />
-        <Flashcards flashCards={this.state.flashCrds} />
+        <Flashcards
+          flashCards={this.state.flashCrds}
+          remove={this.removeCard}
+        />
       </Container>
     );
   }

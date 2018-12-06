@@ -2,11 +2,11 @@ import React from "react";
 import { Card, Container } from "semantic-ui-react";
 import Flashcard from "./Flashcard";
 
-const Flashcards = ({ flashCards }) => (
+const Flashcards = ({ flashCards, remove }) => (
   <Container textAlign="center">
-    {flashCards.map(flashcards => (
+    {flashCards.map(flashcard => (
       <Card>
-        <Flashcard key={flashcards.id} {...flashcards} />
+        <Flashcard key={flashcard.id} {...flashcard} remove2={remove} />
       </Card>
     ))}
   </Container>
