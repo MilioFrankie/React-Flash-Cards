@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu } from "semantic-ui-react";
 
 const Navbar = () => (
-  <Menu>
+  <Menu inverted>
     <Link to="/">
       <Menu.Item>Cards</Menu.Item>
     </Link>

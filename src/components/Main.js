@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Container, Header } from "semantic-ui-react";
 import Flashcards from "./Flashcards";
 import CardForm from "./CardForm";
-import { App } from "./App.scss";
 
 class Main extends Component {
   state = {
@@ -33,25 +32,17 @@ class Main extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          backgroundColor: "#b0bec5",
-          paddingBottom: "800px",
-          paddingTop: "100px"
-        }}
-      >
-        <Container style={{ marginTop: "45px" }}>
-          <Header textAlign="center" as="h1">
-            REACT FLASH CARDS
-          </Header>
-          <br />
-          <CardForm add={this.addCard} />
-          <Flashcards
-            flashCards={this.state.flashCrds}
-            remove={this.removeCard}
-          />
-        </Container>
-      </div>
+      <Container style={{ marginTop: "45px" }}>
+        <Header textAlign="center" as="h1">
+          REACT FLASH CARDS
+        </Header>
+        <br />
+        <CardForm add={this.addCard} />
+        <Flashcards
+          flashCards={this.state.flashCrds}
+          remove={this.removeCard}
+        />
+      </Container>
     );
   }
 }

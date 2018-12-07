@@ -1,5 +1,5 @@
 body {
-  background-color: #b0bec5;
+  background-color: #eceff1 !important;
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -12,7 +12,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.home-page-color {
 }

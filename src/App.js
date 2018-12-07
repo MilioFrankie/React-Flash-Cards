@@ -5,8 +5,8 @@ import NoMatch from "./components/NoMatch";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 
-
 const App = () => (
+  
   <Fragment>
     <Navbar />
     <Switch>
