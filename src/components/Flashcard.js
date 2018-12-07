@@ -7,7 +7,7 @@ const Flashcard = ({ id, front, back, remove2 }) => (
 
     <Button.Group>
       <Button basic color="blue">
-        <Icon name="edit" />   
+        <Icon name="exchange" />
       </Button>
       <Button.Or text="or" />
       <Button basic color="red" onClick={() => remove2(id)}>
